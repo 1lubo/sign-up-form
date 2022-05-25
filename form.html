@@ -5,9 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign-up</title>
+    <link rel="icon" href="./assets/images/odin.png"> 
+    <!-- Odin icon created by Freepik - https://www.flaticon.com/authors/freepik -->
+    <title>Sign-up form</title>
+
 </head>
 <body>
+    <div class="container">
+
+        <div class="left">
+
+            <div id="banner">
+                <img id="logo" src="./assets/images/logo.png" alt="logo">
+                <div id="name">Odin</div>                
+            </div>  
+
+            <div id="footer">Photo by <a href="https://unsplash.com/@buildingjavier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Javier Santos Guzmán</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>  
+
+        </div>
     
+        <div class="right">
+
+            <div class="top">
+                <p>This is not a real online service! You know you need something like this in your life
+                    to help you realize your deepest dreams.<br>
+                    Sign up <em>now</em> to get started.
+                </p>
+                <p>You <em>know</em> you want to.</p>
+                <p>Let's do this!</p>
+            </div>
+
+            <div class="main">
+                <form action="#" target="_blank">
+
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" name="name" id="first_name" minlength="3" placeholder=" " required>
+                    <div class="requirements"> *Name must be at least 3 characters!</div>
+
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="mail" id="email" placeholder=" " required>
+                    <div class="requirements"> *Must be a valid email address!</div>
+
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="pw" id="password" placeholder=" " 
+                    pattern="((?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$)" 
+                    title="Please enter a password at least 8 characters in length with one uppercase,
+                    one lowercase, one number and one special character." required>
+                    <div class="requirements"> *Passwords do not match!</div>
+
+                    <label for="last_name">LAST NAME</label>
+                    <input type="text" name="name" id="last_name" minlength="3" placeholder=" " required>
+                    <div class="requirements"> *Last name must be at least 3 characters!</div>
+
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" name="phone" id="phone" pattern="(\d{3}[\-]\d{3}[\-]\d{4})" 
+                    placeholder=" " required>
+                    <div class="requirements"> *Must be a valid Phone Number!</div>
+
+                    <label for="confirm_pw">CONFIRM PASSWORD</label>
+                    <input type="password" name="password_confirmation" id="confirm_pw" placeholder=" " required>
+                </form>
+            </div>
+
+            <div class="bottom">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
